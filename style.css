@@ -37,3 +37,8 @@ button{
 h4{
     margin: 20px;
 }
+
+#confusedButton{
+    width: 200px;
+    margin: 2%;
+}
