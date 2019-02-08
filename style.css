@@ -17,12 +17,13 @@ img {
     max-width: 100%;
 }
 
-#container {
+.container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 50px;
 }
 
 button{
@@ -31,4 +32,8 @@ button{
     margin-right: 50%;
     display:  block;
 
+}
+
+h4{
+    margin: 20px;
 }

@@ -9,18 +9,73 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
-    <div id="container">
+
+
+    <div id="first" class="container"><h4>You asked me a question once. An important one. It seemed to us both that there were only two possible answers.</h4> <br> <h4>That unsettled me. You know me, I like to challenge things.</h4><br><h4> Well. I’ve done some thinking and I want to share my results with you.</h4><div id="firstButton"><button>Next...</button></div></div>
+
+
+
+
+    <div id="second" class="container"><h4 id='secondText'>Let’s start from the beginning...</h4><img src="thinking.jpg" style='height:unset;width:unset;'>
+    <div id="secondButton"><button>Dun dun Dhun...</button></div></div>
+
+
+
+    <div id="kitkat" class="container">
         <h2>What's the right way eat a Kit Kat?</h2>
-        <img src="whole.jpg">
-        <img src="break.jpeg">
+                    <img src="whole.jpg">
+                    <img src="break.jpeg">
+                    <button id="confusedButton">???</button>
     </div>
 
+
     <div id="lol"></div>
+
+    <div class="container" id="confused">
+        <h4>Can’t just sit back and blindly accept that there’s only two measly ways to eat a KitKat. What kind of life is that? We need some more options.</h4>
+        <img src="facepalm.png" style='height:200px;width:200px;'>
+        <img src="no.png" style='height:200px;width:200px;'>
+    </div>
+
+
     <script>
         $( document ).ready(function() {
+
+            $("#second").hide();
+            $("#secondButton").hide();
+            $("#kitkat").hide();
+            $('#confusedButton').hide();
+            $('#confused').hide();
+
             $("img").click( function(){
                 $('#lol').append('<img src="nope.jpeg">');
+                $("#confusedButton").show();
             });
+
+            $("#firstButton").click(function(){
+                $("#first").hide();
+                $("#firstButton").hide();
+                $("#second").show();
+                $("#secondButton").show();
+            });
+
+
+            $("#secondButton").click(function(){
+                $("#second").hide();
+                $("#secondButton").hide();
+                $("#kitkat").show();
+
+            });
+
+            $("#confusedButton").click(function(){
+                $("#kitkat").hide();
+                $("#lol").hide();
+                $("#confused").show();
+
+            });
+
+
+
         });
 
     </script>
